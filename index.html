@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Krist Wongsuphasawat</title>
+    <style>
+      body{
+        font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+        text-align: center;
+        font-weight: 300;
+        padding-top: 20px;
+        background-color: #3F3F3F;
+        color: #fff;
+        font-size: 20px;
+      }
+      .big-url{
+        font-weight: bold;
+        font-size: 2em;
+        padding: 10px;
+      }
+      a, a:link, a:visited{
+        text-decoration: none;
+        color: #779ecb;
+      }
+
+      a.active{
+        color: #000;
+      }
+
+      a:hover{
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="ninja-44650.svg" width="100" alt="">
+    <p>
+      Thank you for visiting.
+      My personal website is located at:
+    </p>
+    <div class="big-url">
+      <a href="http://kristw.yellowpigz.com">kristw.yellowpigz.com</a>
+    </div>
+    <p>
+      This page should redirect you there in <span id="countdown">3</span> seconds,
+      <br>
+      or you can click <a href="http://kristw.yellowpigz.com">here</a> to go immediately.
+    </p>
+    <small>
+      &mdash; <i>Krist Wongsuphasawat</i>
+    </small>
+
+
+    <script>
+      (function(){
+        var time = 3;
+        var $second = document.querySelector('#countdown');
+
+        function countDown(){
+          window.setTimeout(function(){
+            time--;
+
+            if(time===0){
+              window.location = 'http://kristw.yellowpigz.com';
+            }
+            else{
+              $second.innerHTML = time;
+              countDown();
+            }
+          }, 1000);
+        }
+
+        // countDown();
+      }());
+    </script>
+  </body>
+</html>
